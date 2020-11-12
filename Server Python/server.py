@@ -49,4 +49,4 @@ def insertarRedis():
         return jsonify({'response': 'Error al intentar insertar datos en el server'}), 500
 
 if __name__ == '__main__':
-    app.run(host='localhost', debug=True, port=8080)
+    app.run(host='localhost', debug=True, port=6000)
