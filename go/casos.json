@@ -1,22 +1,24 @@
-[        {
-            "name" : "Erick" ,
+{
+    "Caso":[        {
+            "name" : "Jose" ,
             "location" : "quiche" ,
             "age" :  23,
             "infectedtype" : "communitary" ,
             "state" : "asymptomatic"
         },
         {
-            "name" : "Erick" ,
+            "name" : "Jose" ,
             "location" : "quiche" ,
             "age" :  23,
             "infectedtype" : "communitary" ,
             "state" : "asymptomatic"
         },
         {
-            "name" : "Erick" ,
+            "name" : "Jose" ,
             "location" : "quiche" ,
             "age" :  23,
             "infectedtype" : "communitary" ,
             "state" : "asymptomatic"
         }
 ]
+}
