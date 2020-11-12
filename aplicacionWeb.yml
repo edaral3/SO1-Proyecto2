@@ -1,19 +1,23 @@
-apiVersion: jaegertracing.io/v1
-kind: Jaeger
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: simplest
+  name: aplicacion-web
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: node
+      app: web
   template:
     metadata:
       labels:
-        app: node
+        app: web
     spec:
       containers:
       - name: server-node
         image: gcr.io/sopes-295304/node:1.0
         ports:
         - containerPort: 5000
+      - name: server-web
+        image: gcr.io/sopes-295304/web:1.0
+        ports:
+        - containerPort: 3000
