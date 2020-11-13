@@ -6,10 +6,8 @@ metadata:
     kubernetes.io/ingress.class: gloo
 spec:  
   rules:
-  - host: gloo.proyecto2.com
     http:
       paths:
-      - path: /.*
         backend:
           serviceName: rabbit-deployment
           servicePort: 7001
