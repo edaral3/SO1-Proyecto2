@@ -4,7 +4,7 @@ metadata:
   name: balanceador-rabbit
 spec:
   selector:
-    app: rabbit
+    app: rabbit-deployment
   ports:
     - port: 7000
       targetPort: 7000
