@@ -1,13 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
- name: gloo-ingress
- annotations:
+  name: gloo-ingress
+  annotations:
     kubernetes.io/ingress.class: gloo
 spec:  
   rules:
-    http:
+  - http:
       paths:
-        backend:
+      - backend:
           serviceName: rabbit-deployment
           servicePort: 7001
