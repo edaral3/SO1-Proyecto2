@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aplicacion-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+    spec:
+      containers:
+      - name: server-node
+        image: gcr.io/sopes-proyecto2-295404/node:1.0
+        ports:
+        - containerPort: 5000

@@ -187,9 +187,6 @@ exports.getAllDepartamentos= (_req, res) => {
 };
 
 exports.getRedis= (_req, res) => {
-    /*r.keys('*', (err, keys) => {
-        console.log(keys)
-      });*/
     r.lpop('caso', (err, val) => {
         if (err) { 
             return res

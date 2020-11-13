@@ -13,11 +13,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: server-node
-        image: gcr.io/sopes-295304/node:1.0
-        ports:
-        - containerPort: 5000
       - name: server-web
-        image: gcr.io/sopes-295304/web:1.0
+        image: gcr.io/sopes-proyecto2-295404/web:1.0
         ports:
         - containerPort: 3000
