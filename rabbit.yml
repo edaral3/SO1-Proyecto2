@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbit-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbit
+  template:
+    metadata:
+      labels:
+        app: rabbit
+    spec:
+      containers:
+      - name: python-rabbit-container
+        image: gcr.io/kubproject-292502/python-rabbit:1.0
+        ports:
+        - containerPort: 3000
+      - name: go-rabbit-containter
+        image: gcr.io/kubproject-292502/go-rabbit:1.0
+        ports:
+        - containerPort: 5672

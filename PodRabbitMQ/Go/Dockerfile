@@ -12,4 +12,6 @@ RUN go get -u github.com/gorilla/mux
 
 RUN go build -o main .
 
+EXPOSE 5672
+
 CMD ["/app/main"]
