@@ -6,6 +6,6 @@ spec:
   selector:
     app: rabbit-deployment
   ports:
-    - port: 7000
+    - port: 7001
       targetPort: 7000
   type: ClusterIP
