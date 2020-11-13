@@ -23,17 +23,3 @@ spec:
         ports:
         - containerPort: 7000
           name: http
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: rabbit-deployment
-  namespace: default
-  labels:
-    service: rabbit-deployment
-spec:
-  ports:
-  - port: 7000
-    protocol: TCP
-  selector:
-    app: rabbit-deployment

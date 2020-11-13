@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbit-deployment
+spec:
+  selector:
+    app: rabbit-deployment
+  ports:
+    - port: 7000
+      targetPort: 7000
+  type: ClusterIP
