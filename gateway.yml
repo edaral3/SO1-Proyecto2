@@ -1,0 +1,36 @@
+apiVersion: gateway.solo.io/v1
+kind: VirtualService
+metadata:
+  name: default
+  namespace: gloo-system
+  ownerReferences: []
+status:
+  reportedBy: gateway
+  state: Accepted
+  subresourceStatuses:
+    '*v1.Proxy.gloo-system.gateway-proxy':
+      reportedBy: gloo
+      state: Accepted
+virtualHost:
+  domains:
+  - '*'
+  routes:
+  - matchers:
+    - exact: /
+    options:
+      prefixRewrite: /
+    routeAction:
+      single:
+        upstream:
+          name: default-rabbit-deployment-7000
+          namespace: gloo-system
+  routes:
+  - matchers:
+    - exact: /insertarCaso
+    options:
+      prefixRewrite: /insertarCaso
+    routeAction:
+      single:
+        upstream:
+          name: default-rabbit-deployment-7000
+          namespace: gloo-system
