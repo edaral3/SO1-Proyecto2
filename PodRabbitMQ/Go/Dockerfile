@@ -1,12 +1,15 @@
-FROM golang:1.14.3-alpine AS build
-WORKDIR /src
+FROM golang:latest 
 
-COPY . .
+RUN mkdir /app
+
+ADD . /app
+
+WORKDIR /app
 
 RUN go get github.com/streadway/amqp
 
 RUN go get -u github.com/gorilla/mux
 
-EXPOSE 3000
+RUN go build -o main .
 
-RUN go run server.go
+CMD ["/app/main"]

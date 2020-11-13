@@ -29,7 +29,7 @@ func insertData(w http.ResponseWriter, r *http.Request) {
 	bodyString := string(reqBody)
 
 	// Creación conexión a cola de RabbitMQ
-	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
+	conn, err := amqp.Dial("amqp://guest:guest@3.139.57.229:5672/")
 	failOnError(err, "Fallo al conectar con el servidor de RabbitMQ")
 	defer conn.Close()
 

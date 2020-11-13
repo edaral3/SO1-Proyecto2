@@ -13,7 +13,7 @@ db = client["infectados"]
 col = db["caso"]
 
 #Datos de conexión pika lectura RabbitMQ
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost', port='5672'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='3.139.57.229', port='5672'))
 channel = connection.channel()
 channel.queue_declare(queue='sopes1')
 
