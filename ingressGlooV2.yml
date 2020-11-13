@@ -4,7 +4,11 @@ metadata:
  name: gloo-ingress
  annotations:
     kubernetes.io/ingress.class: gloo
-spec:
+spec:  
+  tls:
+  - hosts:
+    - gloo.proyecto2.com
+    secretName: my-tls-secret
   rules:
   - host: gloo.proyecto2.com
     http:
