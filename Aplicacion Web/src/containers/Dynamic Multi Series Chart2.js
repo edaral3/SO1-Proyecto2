@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CanvasJSReact from '../assets/canvasjs.react';
+import url from '../url'
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 var dataPoints1 = [];
@@ -19,7 +20,7 @@ class DynamicMultiSeriesChart2 extends Component {
 	  }
 
 	llenado(){
-		fetch('http://localhost:5000/getDepartamentos')
+		fetch(url.url+'getDepartamentos')
 		.then(res => res.json())
         .then(res => {
 			dataPoints1 = []
