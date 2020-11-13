@@ -15,9 +15,7 @@ spec:
       containers:
       - name: python-rabbit-container
         image: gcr.io/sopes-proyecto2-295404/python-rabbit:1.0
-        ports:
-        - containerPort: 3000
       - name: go-rabbit-containter
         image: gcr.io/sopes-proyecto2-295404/go-rabbit:1.0
         ports:
-        - containerPort: 5672
+        - containerPort: 7000

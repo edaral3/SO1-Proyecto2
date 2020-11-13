@@ -6,6 +6,6 @@ spec:
   selector:
     app: rabbit
   ports:
-    - port: 5672
-      targetPort: 5672
+    - port: 7000
+      targetPort: 7000
   type: LoadBalancer

@@ -22,7 +22,5 @@ RUN pip3 install pika
 # These are permanent commands i.e even if user will provide come commands those will be considered as argunemts of this command
 ENTRYPOINT [ "python3" ]
 
-EXPOSE 3000
-
 # These commands will be replaced if user provides any command by himself
 CMD ["server.py"]
