@@ -22,6 +22,7 @@ spec:
         image: gcr.io/sopes-proyecto2-295404/go-rabbit2:1.0
         ports:
         - containerPort: 7000
+          name: http
 ---
 apiVersion: v1
 kind: Service
