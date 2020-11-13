@@ -11,5 +11,5 @@ spec:
       paths:
       - path: /.*
         backend:
-          serviceName: rabbit
+          serviceName: rabbit-deployment
           servicePort: 7000
