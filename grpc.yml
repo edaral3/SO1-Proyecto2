@@ -18,6 +18,7 @@ spec:
       containers:
       - name: python-grcp-container
         image: gcr.io/sopes-proyecto2-295404/python-grpc:1.0
+        ports:
         - containerPort: 50051
       - name: go-grcp-containter
         image: gcr.io/sopes-proyecto2-295404/go-grpc:1.0
