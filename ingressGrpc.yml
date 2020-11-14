@@ -7,8 +7,7 @@ metadata:
 spec:  
   rules:
   - http:
-      ports:
-      - port: 85
+      port: 85
       paths:
       - backend:
           serviceName: grpc-deployment
