@@ -25,14 +25,13 @@ type CasoJ struct {
 
 var clienteHttp = &http.Client{}
 
-func peticion(caso CasoJ) {
+func peticion(caso CasoJ, url string) {
 	println("Go rutna en ejecucion")
 	usuarioComoJson, err := json.Marshal(caso)
 	if err != nil {
 		// Maneja el error de acuerdo a tu situación
 		log.Fatalf("Error creando petición: %v", err)
 	}
-	url := "http://localhost:4000/prueba"
 	peticion, err := http.NewRequest("POST", url, bytes.NewBuffer(usuarioComoJson))
 	if err != nil {
 		// Maneja el error de acuerdo a tu situación
@@ -72,6 +71,11 @@ func main() {
 	fmt.Scanf("%s", &ruta)
 	fmt.Scanf("%s", &ruta)
 
+	//ruta = "C:/Users/arnol/Desktop/casos.json"
+	//URL = "http://35.202.134.133:80/insertarCaso"
+	//cantidadGorutinas = 4
+	//cantidadCasos = 4
+
 	jsonFile, err := os.Open(ruta)
 	if err != nil {
 		fmt.Println(err)
@@ -83,7 +87,7 @@ func main() {
 	json.Unmarshal(byteValue, &data)
 
 	for i := 0; i < cantidadCasos; i++ {
-		go peticion(data.Caso[i])
+		go peticion(data.Caso[i], URL)
 		time.Sleep(500 * time.Millisecond)
 	}
 }

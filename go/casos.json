@@ -2,21 +2,21 @@
     "Caso":[        {
             "name" : "Jose" ,
             "location" : "quiche" ,
-            "age" :  23,
+            "age" :  43,
             "infectedtype" : "communitary" ,
             "state" : "asymptomatic"
         },
         {
             "name" : "Jose" ,
             "location" : "quiche" ,
-            "age" :  23,
+            "age" :  43,
             "infectedtype" : "communitary" ,
             "state" : "asymptomatic"
         },
         {
             "name" : "Jose" ,
             "location" : "quiche" ,
-            "age" :  23,
+            "age" :  43,
             "infectedtype" : "communitary" ,
             "state" : "asymptomatic"
         }
