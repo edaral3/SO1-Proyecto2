@@ -9,5 +9,5 @@ spec:
   - http:
       paths:
       - backend:
-          serviceName: rabbit-deployment
-          servicePort: 7001
+          serviceName: grpc-deployment
+          servicePort: 9000
