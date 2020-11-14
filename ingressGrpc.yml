@@ -10,4 +10,4 @@ spec:
       paths:
       - backend:
           serviceName: grpc-deployment
-          servicePort: 7001
+          servicePort: 9000
