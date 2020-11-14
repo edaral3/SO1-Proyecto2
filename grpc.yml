@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: grcp-deployment
+  name: grcp-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grcp-deployment
+  template:
+    metadata:
+      labels:
+        app: grcp-deployment
+    spec:
+      containers:
+      - name: python-grcp-container
+        image: gcr.io/sopes-proyecto2-295404/python-grpc:1.0
+        - containerPort: 50051
+      - name: go-grcp-containter
+        image: gcr.io/sopes-proyecto2-295404/go-grpc:1.0
+        ports:
+        - containerPort: 9000
