@@ -7,7 +7,9 @@ metadata:
 spec:  
   rules:
   - http:
+      ports:
+      - port: 85
       paths:
       - backend:
-          serviceName: rabbit-deployment
-          servicePort: 7001
+          serviceName: grpc-deployment
+          servicePort: 9000
